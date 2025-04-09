@@ -14,7 +14,12 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <h2>A quelle heure le timer doit-il finir?</h2>
+    <input type="time" [(ngModel)]="finalHour" (change)="setFinalTime()">
+    <h2>Combien de temps reste-t-il avant la fin des cours?</h2>
+    <p *ngIf="time > 0; else timePassed">{{time}} secondes</p>
+      <ng-template #timePassed>
+        <p>Il est déjà passé {{finalTime.getHours()}}:{{finalTime.getMinutes()}} depuis {{time *-1}} secondes</p>
+      </ng-template>
   </div>
 </ion-content>
