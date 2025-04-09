@@ -4,10 +4,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"
+  (ionScroll)="duringScrolling($any($event))"
+  (ionScrollStart)="startToScroll()"
+  (ionScrollEnd)="endOfScroll()"
+> 
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">profile</ion-title>
     </ion-toolbar>
   </ion-header>
+  <button (click)="scrollToBottom()">go bot</button>
+  <div id="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident rerum explicabo aut maxime odit non eligendi. Iure, laborum aut. Quibusdam, voluptates. Quam corporis ullam similique repellendus sint necessitatibus aliquid voluptatibus.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora iusto eos dolorum atque amet labore hic sunt vel ullam, distinctio animi alias! Natus deserunt alias vel iste iusto cupiditate optio!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda odit aliquam atque esse iusto, explicabo ad obcaecati ullam cum eveniet consequuntur culpa ipsum officia quia ab enim, beatae dignissimos sint.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt animi voluptatibus perferendis, tenetur magni ipsam amet labore aliquam mollitia quidem officia cum dolor sit esse libero. Mollitia eius harum itaque!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore, fuga consequatur, nesciunt adipisci laborum dolor sed facere necessitatibus doloremque, autem tempore ducimus alias corrupti vitae sint. Quibusdam, laborum. Nam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore, fuga consequatur, nesciunt adipisci laborum dolor sed facere necessitatibus doloremque, autem tempore ducimus alias corrupti vitae sint. Quibusdam, laborum. Nam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore, fuga consequatur, nesciunt adipisci laborum dolor sed facere necessitatibus doloremque, autem tempore ducimus alias corrupti vitae sint. Quibusdam, laborum. Nam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore, fuga consequatur, nesciunt adipisci laborum dolor sed facere necessitatibus doloremque, autem tempore ducimus alias corrupti vitae sint. Quibusdam, laborum. Nam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore, fuga consequatur, nesciunt adipisci laborum dolor sed facere necessitatibus doloremque, autem tempore ducimus alias corrupti vitae sint. Quibusdam, laborum. Nam.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore, fuga consequatur, nesciunt adipisci laborum dolor sed facere necessitatibus doloremque, autem tempore ducimus alias corrupti vitae sint. Quibusdam, laborum. Nam.</p>
+    <button (click)="scrollToTop()">go top</button>
+  </div>
 </ion-content>

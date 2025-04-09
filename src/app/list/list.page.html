@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list lines="full" inset="true">
+    <h2>Students</h2>
+    <ion-item *ngFor=" let stu of studentList">{{stu}}</ion-item>
+    <h2>Countries</h2>
+    <ion-item-divider *ngFor=" let group of countries">{{group.initial}}</ion-item-divider>
+    <h3>Countries</h3>
+    <ion-item-group *ngFor=" let group of countries">
+      <ion-item-divider>{{group.initial}}</ion-item-divider>
+      <ion-item *ngFor="let country of group.countries">{{country}} </ion-item>
+
+    </ion-item-group>
+
+  </ion-list>
+</ion-content>
